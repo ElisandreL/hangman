@@ -1,9 +1,27 @@
+body {
+  background-color: black;
+}
+
 ul li {
+  position: relative;
   display: inline-block;
   margin: 10px;
+}
+
+.row {
+  position: absolute;
 }
 
 .disabled {
   opacity: .3;
 }
+
+/*.myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 2;
+}*/
 /*# sourceMappingURL=style.css.map */

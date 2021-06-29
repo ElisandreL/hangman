@@ -23,7 +23,12 @@ let word = '';
 let wordMap = [];
 let choicesMap = [];
 let scoreCount = 0;
-let scoreMax = 3;
+let scoreMax = 5;
+const laSo = new Audio('assets/sound/dernier.mp3');
+const fiSo = new Audio('assets/sound/rires-1.mp3');
+const secSo = new Audio('assets/sound/cry-2.mp3');
+const thiSo = new Audio('assets/sound/no-3.mp3');
+const foSo = new Audio('assets/sound/hurl-4.mp3');
 
 const init = () => {
     //console.log('>> #init')
@@ -107,6 +112,7 @@ const init = () => {
                 
             }
         });
+
         displayChoice(choicesMap);
 
         if (isInWord === true) {
@@ -114,6 +120,19 @@ const init = () => {
         } else {
             scoreCount++;
             displayScore();
+            if (scoreCount === 1) {
+                fiSo.play();
+                document.querySelector('body').style.backgroundColor = 'red';
+            }
+            if (scoreCount === 2) {
+                secSo.play();
+            }
+            if (scoreCount === 3) {
+                thiSo.play();
+            }
+            if (scoreCount === 4) {
+                foSo.play();
+            }
         }
 
         if (scoreCount === scoreMax) {
@@ -124,9 +143,13 @@ const init = () => {
         }
     };
 
+    
+        
     function endGame() {
+        
         els.choices.innerHTML = `<h1>That was a hard death, bro :(</h1>`;
         document.querySelector('body').style.backgroundColor = 'red';
+        laSo.play();
     };
 
     function winGame() {

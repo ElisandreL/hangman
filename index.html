@@ -2,21 +2,28 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="/assets/css/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
         <title>Hangman</title>
     </head>
-    <body>
-        <div id="score">
-            <p>Score</p>
+    <body class="text-white">
+        <!--<video autoplay muted loop class="myVideo">
+            <source src="/assets/bg/alb_smokfx1021_1080p_24fps.mp4" type="video/mp4">
+        </video>-->
+        <div class="row position-absolute top-50 start-50 translate-middle">
+            <div id="score" class="">
+                <p>Score</p>
+            </div>
+            <div id="answer" class="">
+                Answer
+                <ul class=""></ul>
+            </div>
+            <div id="choices" class="">
+                Choices
+                <ul class=""></ul>
+            </div>
         </div>
-        <div id="answer">
-            Answer
-            <ul></ul>
-        </div>
-        <div id="choices">
-            Choices
-            <ul></ul>
-        </div>
+    
 
         <script src="assets/js/initFuctions.js"></script>
         <script src="assets\js\script.js"></script>
