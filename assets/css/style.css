@@ -1,11 +1,17 @@
 body {
-  background-color: black;
+  background-color: #ffcaf5;
+  background-image: cover;
+}
+
+p, #score {
+  color: black;
 }
 
 ul li {
   position: relative;
   display: inline-block;
   margin: 10px;
+  color: black;
 }
 
 .row {

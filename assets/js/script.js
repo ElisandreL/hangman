@@ -30,6 +30,8 @@ const secSo = new Audio('assets/sound/cry-2.mp3');
 const thiSo = new Audio('assets/sound/no-3.mp3');
 const foSo = new Audio('assets/sound/hurl-4.mp3');
 
+
+
 const init = () => {
     //console.log('>> #init')
 
@@ -122,16 +124,20 @@ const init = () => {
             displayScore();
             if (scoreCount === 1) {
                 fiSo.play();
-                document.querySelector('body').style.backgroundColor = 'red';
+                document.querySelector('body').style.backgroundColor = '#1c0506';
             }
             if (scoreCount === 2) {
                 secSo.play();
+                document.querySelector('body').style.backgroundColor = '#290809';
             }
             if (scoreCount === 3) {
                 thiSo.play();
+                document.querySelector('body').style.backgroundColor = '#370b0c';
+                
             }
             if (scoreCount === 4) {
                 foSo.play();
+                document.querySelector('body').style.backgroundColor = '#520c0e';
             }
         }
 
@@ -148,7 +154,7 @@ const init = () => {
     function endGame() {
         
         els.choices.innerHTML = `<h1>That was a hard death, bro :(</h1>`;
-        document.querySelector('body').style.backgroundColor = 'red';
+        document.querySelector('body').style.backgroundColor = '#6f0508';
         laSo.play();
     };
 
