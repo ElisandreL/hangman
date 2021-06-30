@@ -32,6 +32,8 @@ const foSo = new Audio('assets/sound/hurl-4.mp3');
 
 
 
+
+
 const init = () => {
     //console.log('>> #init')
 
@@ -124,20 +126,27 @@ const init = () => {
             displayScore();
             if (scoreCount === 1) {
                 fiSo.play();
-                document.querySelector('body').style.backgroundColor = '#1c0506';
+                document.querySelector('body').style.backgroundColor = '#f2a3a3';
+                document.getElementById('head').style.display = 'inline';
             }
             if (scoreCount === 2) {
                 secSo.play();
-                document.querySelector('body').style.backgroundColor = '#290809';
+                document.querySelector('body').style.backgroundColor = '#d67373';
+                document.getElementById('head').style.display = 'none';
+                document.getElementById('bod').style.display = 'inline';
             }
             if (scoreCount === 3) {
                 thiSo.play();
-                document.querySelector('body').style.backgroundColor = '#370b0c';
+                document.querySelector('body').style.backgroundColor = '#cd5454';
+                document.getElementById('bod').style.display = 'none';
+                document.getElementById('bodarm').style.display = 'inline';
                 
             }
             if (scoreCount === 4) {
                 foSo.play();
-                document.querySelector('body').style.backgroundColor = '#520c0e';
+                document.querySelector('body').style.backgroundColor = '#ba3434';
+                document.getElementById('bodarm').style.display = 'none';
+                document.getElementById('legs').style.display = 'inline';
             }
         }
 
@@ -154,8 +163,10 @@ const init = () => {
     function endGame() {
         
         els.choices.innerHTML = `<h1>That was a hard death, bro :(</h1>`;
-        document.querySelector('body').style.backgroundColor = '#6f0508';
+        document.querySelector('body').style.backgroundColor = '#930d0d';
         laSo.play();
+        document.getElementById('legs').style.display = 'none';
+        document.getElementById('last').style.display = 'inline';
     };
 
     function winGame() {

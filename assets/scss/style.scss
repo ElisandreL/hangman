@@ -1,10 +1,16 @@
 
 body {
     background-color: #ffcaf5;
-    background-image: cover;
 
 }
+img {
+    margin-left: 1200px;
+    opacity: .8;
+    margin-top: 200px;
+    width: 40%;
+    display: none;
 
+}
 p, #score {
     color: black;
 }
