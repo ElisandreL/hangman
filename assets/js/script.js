@@ -29,6 +29,8 @@ const fiSo = new Audio('assets/sound/rires-1.mp3');
 const secSo = new Audio('assets/sound/cry-2.mp3');
 const thiSo = new Audio('assets/sound/no-3.mp3');
 const foSo = new Audio('assets/sound/hurl-4.mp3');
+const sound1 = new Audio('assets/fond/annabelles-music-box.mp3');
+
 
 
 
@@ -36,7 +38,7 @@ const foSo = new Audio('assets/sound/hurl-4.mp3');
 
 const init = () => {
     //console.log('>> #init')
-
+    sound1.play();
     // Attach element : 
 
     els.score = document.getElementById("score");
