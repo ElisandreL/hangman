@@ -29,7 +29,12 @@ const fiSo = new Audio('assets/sound/rires-1.mp3');
 const secSo = new Audio('assets/sound/cry-2.mp3');
 const thiSo = new Audio('assets/sound/no-3.mp3');
 const foSo = new Audio('assets/sound/hurl-4.mp3');
-const sound1 = new Audio('assets/fond/annabelles-music-box.mp3');
+const sound1 = new Audio('assets/sound/fond/annabelles-music-box.mp3');
+const sound2 = new Audio('assets/sound/fond/fond1.mp3');
+const sound3 = new Audio('assets/sound/fond/fond2.mp3');
+const sound4 = new Audio('assets/sound/fond/fond3.mp3');
+const sound5 = new Audio('assets/sound/fond/fond4.mp3');
+const sound6 = new Audio('assets/sound/fond/fondfin.mp3');
 
 
 
@@ -38,7 +43,8 @@ const sound1 = new Audio('assets/fond/annabelles-music-box.mp3');
 
 const init = () => {
     //console.log('>> #init')
-    sound1.play();
+    
+    
     // Attach element : 
 
     els.score = document.getElementById("score");
@@ -128,17 +134,22 @@ const init = () => {
             displayScore();
             if (scoreCount === 1) {
                 fiSo.play();
+                sound2.play();
                 document.querySelector('body').style.backgroundColor = '#f2a3a3';
                 document.getElementById('head').style.display = 'inline';
             }
             if (scoreCount === 2) {
                 secSo.play();
+                sound2.pause();
+                sound3.play();
                 document.querySelector('body').style.backgroundColor = '#d67373';
                 document.getElementById('head').style.display = 'none';
                 document.getElementById('bod').style.display = 'inline';
             }
             if (scoreCount === 3) {
                 thiSo.play();
+                sound3.pause();
+                sound4.play();
                 document.querySelector('body').style.backgroundColor = '#cd5454';
                 document.getElementById('bod').style.display = 'none';
                 document.getElementById('bodarm').style.display = 'inline';
@@ -146,6 +157,8 @@ const init = () => {
             }
             if (scoreCount === 4) {
                 foSo.play();
+                sound4.pause();
+                sound5.play();
                 document.querySelector('body').style.backgroundColor = '#ba3434';
                 document.getElementById('bodarm').style.display = 'none';
                 document.getElementById('legs').style.display = 'inline';
@@ -167,6 +180,8 @@ const init = () => {
         els.choices.innerHTML = `<h1>That was a hard death, bro :(</h1>`;
         document.querySelector('body').style.backgroundColor = '#930d0d';
         laSo.play();
+        sound5.pause();
+        sound6.play();
         document.getElementById('legs').style.display = 'none';
         document.getElementById('last').style.display = 'inline';
     };

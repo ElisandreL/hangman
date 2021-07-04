@@ -78,6 +78,7 @@ function pickWord() {
 // ou ça : 
 window.addEventListener('load', () => {
 init();
+
 });
 
 /**
